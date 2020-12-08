@@ -28,14 +28,14 @@ def run_instrs_1(instrs):
 part1 = run_instrs_1(instr)
 print(f"Part 1: {part1}")
 
-import time
-mTime = 0.1
-
 def run_instrs_2(instrs):
-    starttime = time.time()
     acc = 0
     pointer = 0
+    done = []
     while True:
+        if pointer in done:
+            return None
+        done += [pointer]
         if pointer == len(instr):
             return acc
         t, val = instrs[pointer]
@@ -46,8 +46,6 @@ def run_instrs_2(instrs):
             pointer += val
         elif t == "nop":
             pointer += 1
-        if time.time()-starttime > mTime:
-            return None
 
 instr_perms = []
 for index in range(len(instr)):
@@ -65,7 +63,6 @@ for index in range(len(instr)):
 for instrs in instr_perms:
     x = run_instrs_2(instrs)
     if x != None:
-        print(x)
-
-part2 = 0
+        part2 = x
+        break
 print(f"Part 2: {part2}")
