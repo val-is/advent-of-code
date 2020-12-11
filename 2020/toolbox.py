@@ -9,3 +9,11 @@ def memoize(func):
             memoized[i] = func(i, *args)
         return memoized[i]
     return inner
+
+
+"""
+increase the recursion depth quickly
+"""
+def increase_recursion(depth):
+    from sys import setrecursionlimit
+    setrecursionlimit(depth)
