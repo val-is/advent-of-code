@@ -8,6 +8,10 @@ def memoize(func):
         if i not in memoized:
             memoized[i] = func(i, *args)
         return memoized[i]
+    def reset():
+        nonlocal memoized
+        memoized = {}
+    inner.reset = reset
     return inner
 
 
@@ -22,6 +26,10 @@ def memoize_the_world(func):
         if key not in memoized:
             memoized[key] = func(*args)
         return memoized[key]
+    def reset():
+        nonlocal memoized
+        memoized = {}
+    inner.reset = reset
     return inner
 
 

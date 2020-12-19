@@ -1,4 +1,4 @@
-inputs = [i.strip() for i in open('2020/inputs/day18.txt', 'r').readlines()]
+inputs = [i.strip() for i in open('inputs/day18.txt', 'r').readlines()]
 
 def eval_intstring(expression, precedence):
     break_it_down = expression.split(" ")
