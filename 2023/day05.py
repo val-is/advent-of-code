@@ -119,7 +119,6 @@ for operation in maps[::-1]:
         if dest_start <= seed < dest_start + dist:
             seed = (seed - dest_start) + source_start
             break
-print(seed)
 
 part1 = min(seeds)
 part2 = 0
