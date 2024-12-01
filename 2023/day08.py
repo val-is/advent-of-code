@@ -45,6 +45,7 @@ while True:
 part2 = 1
 import math
 def lcm(a, b):
+    print(a, b)
     return abs(a*b) // math.gcd(a, b)
 for i in occur:
     part2 = lcm(part2, i)

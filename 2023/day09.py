@@ -54,8 +54,8 @@ def run(fname):
     print(f"part 2:")
     print(f"{part2}")
 
-print("TEST")
-run('inputs/test.txt')
+# print("TEST")
+# run('inputs/test.txt')
 print()
 print("REAL")
 run('inputs/day09.txt')
